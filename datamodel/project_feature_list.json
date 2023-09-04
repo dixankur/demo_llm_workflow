@@ -1,0 +1,62 @@
+{ 
+    "P001": { 
+        "tables": [ 
+            { 
+                "name": "ticket_details",
+                "path": "ticket_details.csv",
+                "format": "csv",
+                "columns": [
+                    [ "number", true ], 
+                    [ "opened", true ], 
+                    [ "short_desc", false ], 
+                    [ "caller", false ], 
+                    [ "opened_by", true ], 
+                    [ "affected_user", true ] 
+                ]
+            }, 
+            { 
+                "name": "ticket_other_details",
+                "path": "ticket_other_details.csv",
+                "format": "csv",
+                "columns": [ 
+                    [ "number", true ], 
+                    [ "config_item", true ], 
+                    [ "location", true ],
+                    [ "child_incidents", false ],
+                    [ "channel", true ],
+                    [ "reassignment_counts", true ]
+                ]
+            },
+            { 
+                "name": "ticket_category_details",
+                "path": "ticket_category_details.csv",
+                "format": "csv",
+                "columns": [ 
+                    [ "number", true ], 
+                    [ "priority", true ], 
+                    [ "category", true ],
+                    [ "assignment_group", false ],
+                    [ "updated_by", true ]
+                ]
+            },
+            { 
+                "name": "location_details",
+                "path": "location_details.csv",
+                "format": "csv",
+                "columns": [ 
+                    [ "number", true ], 
+                    [ "work_performed_during_call", true ], 
+                    [ "office_location", true ]
+                ]
+            }
+        ],
+        "joins": [ 
+            { 
+                "left": "snow_ticket_details", 
+                "right": "user_detail", 
+                "type": "inner join", 
+                "on": "snow_ticket_details.user_id = user_detail.user_id" 
+            } 
+        ] 
+    }
+}

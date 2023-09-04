@@ -1,0 +1,11 @@
+[ 
+    [ "S01", "Use case generation" ], 
+    [ "S02", "Feature list generatiom" ], 
+    [ "S03", "Code generation for dataset" ], 
+    [ "S04", "Dataset generation & Approval" ], 
+    [ "S05", "Random Forest model generation" ], 
+    [ "S06", "Model training and Visalization" ],
+    [ "S07", "Model presentation and 1-Pager" ],
+    [ "S08", "Model deployment and prediction pipeline" ],
+    [ "S09", "Prediction and Analysis" ]
+]
