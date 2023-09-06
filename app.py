@@ -1,5 +1,5 @@
 import streamlit as st
-from webapp import app_home, project_home, feature_list, use_case, code_gen, data_gen 
+from webapp import app_home, project_home, feature_list, use_case, code_gen, data_gen, model_ppt
 from webapp import rf_gen, tbi_page, ask_me_anything, model_train_viz
 from webapp.app_config import update_data
 
@@ -35,6 +35,9 @@ if st.session_state['current_page'] == 'rf_gen':
 
 if st.session_state['current_page'] == 'train_viz':
     model_train_viz.render()
+
+if st.session_state['current_page'] == 'model_ppt':
+    model_ppt.render()
 
 if st.session_state['current_page'] == 'amy_chat':
     ask_me_anything.render()
